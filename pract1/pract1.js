@@ -11,7 +11,7 @@ for(i=0; i<=num; i++)
  } 
 }
 console.log(lista)
-return cont
+return lista
 }
 sumaDeNumeros(11)
 
@@ -25,6 +25,6 @@ let vocales= (vocal) =>{
     cont++
    }
  }
- console.log("El numero de vocales son :", cont)
+ console.log("El numero de vocales es :", cont)
 }
-vocales("pedro pica papas")
+vocales("YO")
