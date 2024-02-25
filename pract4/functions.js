@@ -1,20 +1,41 @@
 //----Ejercicio8
-const misDatos = {
-    nombre:"Alberto",
-    apellido: "Ortiz",
-    edad:24,
-    ciudad:"Xalapa"
+const misDatos ={  
+    "nombre":"ALberto",
+    "Apellido": "Ortiz",
+    "Edad":24,
+    "ciudad":"Xalapa",
+    "estado":"veracruz"
 }
-let datosPersonales =(datos)=>{
-     return misDatos[datos.toLowerCase()]
+
+
+let obtenerDatos = (dato)=>{
+    return misDatos[dato]
+    
 }
-console.log(datosPersonales(process.argv[2]))
-//-----Ejercicio9
-const otrosDatos = {
+console.log(obtenerDatos(process.argv[2]))
+//------ejercicio9
+const agregar = {
 
 }
-let listaNueva = (dato,dato2) =>{
-let resultado= Object.assign(otrosDatos,dato)
-return resultado
+let integrarDatos = (nuevo,propiedad) => {
+  agregar[nuevo]=propiedad
+  return agregar[nuevo]
 }
-console.log(listaNueva(process.argv[2],process.argv[3]))
+integrarDatos(process.argv[2],process.argv[3])
+console.log(agregar)
+//-------ejercicio10
+const primerJson ={
+    "ciudad":"xalapa",
+    "estado":"veracruz"
+}
+const segundoJson ={
+    "ciudad":"veracruz",
+    "estado":"veracruz"
+}
+let comparacion = (dato1) =>{
+if(primerJson[dato1]==segundoJson[dato1])return "Son los mismos"
+else
+return "no son los mismos"
+}
+
+console.log(comparacion(process.argv[2]))
